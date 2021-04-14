@@ -43,23 +43,42 @@ namespace random_Image_client
 
         //=================================================================
         //=================================================================
+        
+        /// <summary>
+        /// HTTPS通信してImage情報を取得
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         private Person GetJsonData(string url)
         {
-            var request = WebRequest.Create(url);
-            request.Method = "GET";
+            try
+            {
+                var request = WebRequest.Create(url);
+                request.Method = "GET";
 
-            var webResponse = request.GetResponse();
-            var webStream = webResponse.GetResponseStream();
+                var webResponse = request.GetResponse();
+                var webStream = webResponse.GetResponseStream();
 
-            var reader = new StreamReader(webStream);
+                var reader = new StreamReader(webStream);
 
-            var data = reader.ReadToEnd();
+                var data = reader.ReadToEnd();
 
-            var JsonObject = JsonSerializer.Deserialize<Person>(data);
+                var JsonObject = JsonSerializer.Deserialize<Person>(data);
 
-            return JsonObject;
+                return JsonObject;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
         }
 
+        /// <summary>
+        /// サーバーからイメージを取得
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         private Image GetImage(string url)
         {
             using (WebClient client = new WebClient())
