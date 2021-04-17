@@ -15,10 +15,18 @@
 ## 製作期間
 * 2021年4月8日(木)~2021年4月10日(土)
 
+## 動画(YouTube)
+[https://www.youtube.com/watch?v=AXCVxSYtJSU](https://www.youtube.com/watch?v=AXCVxSYtJSU)
+
 ## 製作人数
 * 個人
 
-# 実行画面
+
+
+<div style="page-break-before:always"></div> 
+
+
+# 実行画面(Gif)
 <center><img src = "doc/windowForm.gif"></center>
 
 # ソースコード(Form1.cs)
@@ -37,6 +45,8 @@
         pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
     }
 ```
+
+<div style="page-break-before:always"></div> 
 
 ## イメージ情報を取得
 ```C#
