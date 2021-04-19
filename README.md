@@ -21,7 +21,8 @@
 ## 製作人数
 * 個人
 
-
+## 製作者
+* LEE GEONHWI(イゴンヒ)
 
 <div style="page-break-before:always"></div> 
 
